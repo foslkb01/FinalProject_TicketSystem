@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace FinalProject_TicketSystem
 {
-    public partial class Customer : Form
+    public partial class CurrentTickets : Form
     {
-        public Customer()
+        public CurrentTickets()
         {
             InitializeComponent();
         }
 
-        private void Customer_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

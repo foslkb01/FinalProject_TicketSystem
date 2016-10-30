@@ -16,7 +16,7 @@ namespace FinalProject_TicketSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Customer());
+            Application.Run(new Main());
         }
     }
 }
