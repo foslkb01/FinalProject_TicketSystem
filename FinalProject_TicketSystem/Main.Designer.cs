@@ -35,9 +35,10 @@
             // 
             // btnCustomer
             // 
-            this.btnCustomer.Location = new System.Drawing.Point(128, 135);
+            this.btnCustomer.Location = new System.Drawing.Point(85, 88);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(95, 44);
+            this.btnCustomer.Size = new System.Drawing.Size(63, 29);
             this.btnCustomer.TabIndex = 0;
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // btnEmployee
             // 
-            this.btnEmployee.Location = new System.Drawing.Point(124, 240);
+            this.btnEmployee.Location = new System.Drawing.Point(83, 156);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(99, 47);
+            this.btnEmployee.Size = new System.Drawing.Size(66, 31);
             this.btnEmployee.TabIndex = 1;
             this.btnEmployee.Text = "Employee";
             this.btnEmployee.UseVisualStyleBackColor = true;
@@ -57,21 +59,25 @@
             // 
             this.lblChoose.AutoSize = true;
             this.lblChoose.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lblChoose.Location = new System.Drawing.Point(85, 76);
+            this.lblChoose.Location = new System.Drawing.Point(57, 49);
+            this.lblChoose.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChoose.Name = "lblChoose";
-            this.lblChoose.Size = new System.Drawing.Size(182, 20);
+            this.lblChoose.Size = new System.Drawing.Size(123, 13);
             this.lblChoose.TabIndex = 2;
             this.lblChoose.Text = "Choose one to continue:";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(352, 413);
+            this.ClientSize = new System.Drawing.Size(235, 268);
             this.Controls.Add(this.lblChoose);
             this.Controls.Add(this.btnEmployee);
             this.Controls.Add(this.btnCustomer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "Main";
             this.ResumeLayout(false);

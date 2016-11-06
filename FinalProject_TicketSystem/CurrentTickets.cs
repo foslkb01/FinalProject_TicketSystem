@@ -21,5 +21,12 @@ namespace FinalProject_TicketSystem
         {
 
         }
+
+        private void CurrentTickets_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'ticketsDataSet.Tickets' table. You can move, or remove it, as needed.
+            this.ticketsTableAdapter.Fill(this.ticketsDataSet.Tickets);
+
+        }
     }
 }
