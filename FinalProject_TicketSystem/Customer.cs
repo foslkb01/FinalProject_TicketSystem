@@ -12,6 +12,9 @@ namespace FinalProject_TicketSystem
 {
     public partial class Customer : Form
     {
+
+       
+
         public Customer()
         {
             InitializeComponent();
@@ -24,8 +27,10 @@ namespace FinalProject_TicketSystem
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            
            
+
+
+
         }
     }
 }

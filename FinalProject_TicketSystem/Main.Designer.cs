@@ -36,7 +36,7 @@
             // btnCustomer
             // 
             this.btnCustomer.Location = new System.Drawing.Point(85, 88);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(63, 29);
             this.btnCustomer.TabIndex = 0;
@@ -47,7 +47,7 @@
             // btnEmployee
             // 
             this.btnEmployee.Location = new System.Drawing.Point(83, 156);
-            this.btnEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(66, 31);
             this.btnEmployee.TabIndex = 1;
@@ -76,10 +76,11 @@
             this.Controls.Add(this.btnEmployee);
             this.Controls.Add(this.btnCustomer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
