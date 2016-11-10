@@ -27,7 +27,42 @@ namespace FinalProject_TicketSystem
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-           
+            if(string.IsNullOrWhiteSpace(this.txtName.Text))
+            {
+                MessageBox.Show("Please fill in the name");
+            }
+
+            else if (string.IsNullOrWhiteSpace(this.txtPhone.Text))
+            {
+                MessageBox.Show("Please fill in the phone number");
+            }
+
+            else if (string.IsNullOrWhiteSpace(this.txtEmail.Text))
+            {
+                MessageBox.Show("Please fill in your email");
+            }
+
+            else if (string.IsNullOrWhiteSpace(this.txtLocation.Text))
+            {
+                MessageBox.Show("Please fill in your location");
+            }
+
+            else if (string.IsNullOrWhiteSpace(this.dtpDate.Text))
+            {
+                MessageBox.Show("Please pick a date");
+            }
+
+            else if (string.IsNullOrWhiteSpace(this.drpPriority.Text))
+            {
+                MessageBox.Show("Please choose a priority");
+            }
+
+            else if (string.IsNullOrWhiteSpace(this.txtDescription.Text))
+            {
+                MessageBox.Show("Please fill in the descrition");
+            }
+
+
 
 
 

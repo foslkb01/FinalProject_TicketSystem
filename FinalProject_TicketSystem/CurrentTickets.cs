@@ -19,7 +19,7 @@ namespace FinalProject_TicketSystem
         private const string dbTICKETS = "Data Source = ../../tickets.db; Version = 3";
 
         //Use the following for deployment.
-       //private const string dbEMPLOYEES = "Data Source = CSIndustries.db; Version = 3";
+       //private const string dbTICKETS = "Data Source = tickets.db; Version = 3";
 
         SQLiteConnection connection = new SQLiteConnection(dbTICKETS);
         SQLiteDataAdapter dataAdapter;
