@@ -67,5 +67,10 @@ namespace FinalProject_TicketSystem
 
 
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
