@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvTickets = new System.Windows.Forms.DataGridView();
-            this.ticketsDataSet = new FinalProject_TicketSystem.TicketsDataSet();
-            this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ticketsTableAdapter = new FinalProject_TicketSystem.TicketsDataSetTableAdapters.TicketsTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,9 +38,14 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketsDataSet1 = new FinalProject_TicketSystem.TicketsDataSet();
+            this.ticketsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketsTableAdapter = new FinalProject_TicketSystem.TicketsDataSetTableAdapters.TicketsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTickets
@@ -60,26 +62,11 @@
             this.priorityDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn});
             this.dgvTickets.DataSource = this.ticketsBindingSource;
-            this.dgvTickets.Location = new System.Drawing.Point(2, 12);
+            this.dgvTickets.Location = new System.Drawing.Point(12, 12);
             this.dgvTickets.Name = "dgvTickets";
-            this.dgvTickets.RowTemplate.Height = 28;
-            this.dgvTickets.Size = new System.Drawing.Size(1126, 629);
+            this.dgvTickets.Size = new System.Drawing.Size(965, 528);
             this.dgvTickets.TabIndex = 0;
-            this.dgvTickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTickets_CellContentClick);
-            // 
-            // ticketsDataSet
-            // 
-            this.ticketsDataSet.DataSetName = "TicketsDataSet";
-            this.ticketsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ticketsBindingSource
-            // 
-            this.ticketsBindingSource.DataMember = "Tickets";
-            this.ticketsBindingSource.DataSource = this.ticketsDataSet;
-            // 
-            // ticketsTableAdapter
-            // 
-            this.ticketsTableAdapter.ClearBeforeFill = true;
+            this.dgvTickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTickets_CellContentClick_1);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -130,27 +117,45 @@
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             // 
+            // ticketsBindingSource
+            // 
+            this.ticketsBindingSource.DataMember = "Tickets";
+            this.ticketsBindingSource.DataSource = this.ticketsDataSet1;
+            // 
+            // ticketsDataSet1
+            // 
+            this.ticketsDataSet1.DataSetName = "TicketsDataSet";
+            this.ticketsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ticketsDataSet1BindingSource
+            // 
+            this.ticketsDataSet1BindingSource.DataSource = this.ticketsDataSet1;
+            this.ticketsDataSet1BindingSource.Position = 0;
+            // 
+            // ticketsTableAdapter
+            // 
+            this.ticketsTableAdapter.ClearBeforeFill = true;
+            // 
             // CurrentTickets
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 645);
+            this.ClientSize = new System.Drawing.Size(1152, 539);
             this.Controls.Add(this.dgvTickets);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CurrentTickets";
-            this.Text = "CurrentTickets";
-            this.Load += new System.EventHandler(this.CurrentTickets_Load);
+            this.Load += new System.EventHandler(this.CurrentTickets_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTickets)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+       
         private System.Windows.Forms.DataGridView dgvTickets;
-        private TicketsDataSet ticketsDataSet;
+        private System.Windows.Forms.BindingSource ticketsDataSet1BindingSource;
+        private TicketsDataSet ticketsDataSet1;
         private System.Windows.Forms.BindingSource ticketsBindingSource;
         private TicketsDataSetTableAdapters.TicketsTableAdapter ticketsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;

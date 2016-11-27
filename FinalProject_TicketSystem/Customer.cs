@@ -12,8 +12,8 @@ namespace FinalProject_TicketSystem
 {
     public partial class Customer : Form
     {
+        private TicketsDataSetTableAdapters.TicketsTableAdapter adapter;
 
-       
 
         public Customer()
         {
@@ -22,12 +22,22 @@ namespace FinalProject_TicketSystem
 
         private void Customer_Load(object sender, EventArgs e)
         {
-
+            adapter = new TicketsDataSetTableAdapters.TicketsTableAdapter();
+            dtpDate.MaxDate = DateTime.Now;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(this.txtName.Text))
+            string name = txtName.Text;
+            double phone = Convert.ToDouble(txtPhone.Text);
+            string email = txtEmail.Text;
+            string location = txtLocation.Text;
+            double priority = Convert.ToDouble(drbPriority.Text);
+            string description = txtDescription.Text;
+
+
+
+            if (string.IsNullOrWhiteSpace(this.txtName.Text))
             {
                 MessageBox.Show("Please fill in the name");
             }
@@ -52,7 +62,7 @@ namespace FinalProject_TicketSystem
                 MessageBox.Show("Please pick a date");
             }
 
-            else if (string.IsNullOrWhiteSpace(this.drpPriority.Text))
+            else if (string.IsNullOrWhiteSpace(this.drbPriority.Text))
             {
                 MessageBox.Show("Please choose a priority");
             }
@@ -62,15 +72,19 @@ namespace FinalProject_TicketSystem
                 MessageBox.Show("Please fill in the descrition");
             }
 
+            try
+            {
 
+                adapter.Insert(name, phone, email, location, dtpDate.Value, priority, description);
+            }
 
-
-
+            catch
+            {
+                MessageBox.Show("Error");
+            }
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
 
-        }
+
     }
 }

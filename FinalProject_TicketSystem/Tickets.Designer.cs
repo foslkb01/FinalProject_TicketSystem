@@ -20,9 +20,9 @@ namespace FinalProject_TicketSystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("TicketsDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Tickets")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class TicketsDataSet : global::System.Data.DataSet {
+    public partial class Tickets : global::System.Data.DataSet {
         
         private TicketsDataTable tableTickets;
         
@@ -30,7 +30,7 @@ namespace FinalProject_TicketSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public TicketsDataSet() {
+        public Tickets() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace FinalProject_TicketSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected TicketsDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Tickets(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -79,7 +79,7 @@ namespace FinalProject_TicketSystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TicketsDataTable Tickets {
+        public TicketsDataTable _Tickets {
             get {
                 return this.tableTickets;
             }
@@ -127,7 +127,7 @@ namespace FinalProject_TicketSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            TicketsDataSet cln = ((TicketsDataSet)(base.Clone()));
+            Tickets cln = ((Tickets)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace FinalProject_TicketSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "TicketsDataSet";
+            this.DataSetName = "Tickets";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/TicketsDataSet.xsd";
+            this.Namespace = "http://tempuri.org/Tickets.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTickets = new TicketsDataTable();
@@ -210,7 +210,7 @@ namespace FinalProject_TicketSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTickets() {
+        private bool ShouldSerialize_Tickets() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace FinalProject_TicketSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            TicketsDataSet ds = new TicketsDataSet();
+            Tickets ds = new Tickets();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -517,6 +517,8 @@ namespace FinalProject_TicketSystem {
                 this.columnPriority.AllowDBNull = false;
                 this.columnDescription.AllowDBNull = false;
                 this.columnDescription.MaxLength = 50;
+                this.ExtendedProperties.Add("Generator_TablePropName", "_Tickets");
+                this.ExtendedProperties.Add("Generator_UserTableName", "Tickets");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -584,7 +586,7 @@ namespace FinalProject_TicketSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TicketsDataSet ds = new TicketsDataSet();
+                Tickets ds = new Tickets();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -781,7 +783,7 @@ namespace FinalProject_TicketSystem {
         }
     }
 }
-namespace FinalProject_TicketSystem.TicketsDataSetTableAdapters {
+namespace FinalProject_TicketSystem.TicketsTableAdapters {
     
     
     /// <summary>
@@ -983,7 +985,7 @@ SELECT Id, Name, Phone, Email, Location, Date, Priority, Description FROM Ticket
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TicketsDataSet.TicketsDataTable dataTable) {
+        public virtual int Fill(Tickets.TicketsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -996,9 +998,9 @@ SELECT Id, Name, Phone, Email, Location, Date, Priority, Description FROM Ticket
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TicketsDataSet.TicketsDataTable GetData() {
+        public virtual Tickets.TicketsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TicketsDataSet.TicketsDataTable dataTable = new TicketsDataSet.TicketsDataTable();
+            Tickets.TicketsDataTable dataTable = new Tickets.TicketsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1006,14 +1008,14 @@ SELECT Id, Name, Phone, Email, Location, Date, Priority, Description FROM Ticket
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TicketsDataSet.TicketsDataTable dataTable) {
+        public virtual int Update(Tickets.TicketsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TicketsDataSet dataSet) {
+        public virtual int Update(Tickets dataSet) {
             return this.Adapter.Update(dataSet, "Tickets");
         }
         
@@ -1322,10 +1324,10 @@ SELECT Id, Name, Phone, Email, Location, Date, Priority, Description FROM Ticket
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(TicketsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Tickets dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._ticketsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Tickets.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet._Tickets.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -1341,10 +1343,10 @@ SELECT Id, Name, Phone, Email, Location, Date, Priority, Description FROM Ticket
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(TicketsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Tickets dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._ticketsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Tickets.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet._Tickets.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._ticketsTableAdapter.Update(addedRows));
@@ -1359,10 +1361,10 @@ SELECT Id, Name, Phone, Email, Location, Date, Priority, Description FROM Ticket
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(TicketsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Tickets dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._ticketsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Tickets.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet._Tickets.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._ticketsTableAdapter.Update(deletedRows));
@@ -1401,7 +1403,7 @@ SELECT Id, Name, Phone, Email, Location, Date, Priority, Description FROM Ticket
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(TicketsDataSet dataSet) {
+        public virtual int UpdateAll(Tickets dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
