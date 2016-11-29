@@ -28,181 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblLocation = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblPriority = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label nameLabel;
+            System.Windows.Forms.Label locationLabel;
+            System.Windows.Forms.Label descriptionLabel;
+            System.Windows.Forms.Label dateLabel;
+            this.ticketsDataSet = new FinalProject_TicketSystem.TicketsDataSet();
+            this.ticketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ticketsTableAdapter = new FinalProject_TicketSystem.TicketsDataSetTableAdapters.TicketsTableAdapter();
+            this.tableAdapterManager = new FinalProject_TicketSystem.TicketsDataSetTableAdapters.TableAdapterManager();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.locationTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtLocation = new System.Windows.Forms.TextBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.drpPriority = new System.Windows.Forms.ComboBox();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            nameLabel = new System.Windows.Forms.Label();
+            locationLabel = new System.Windows.Forms.Label();
+            descriptionLabel = new System.Windows.Forms.Label();
+            dateLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblName
+            // nameLabel
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(80, 102);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(55, 20);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Name:";
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(91, 43);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(38, 13);
+            nameLabel.TabIndex = 3;
+            nameLabel.Text = "Name:";
             // 
-            // lblPhone
+            // locationLabel
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(75, 155);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(59, 20);
-            this.lblPhone.TabIndex = 1;
-            this.lblPhone.Text = "Phone:";
+            locationLabel.AutoSize = true;
+            locationLabel.Location = new System.Drawing.Point(91, 69);
+            locationLabel.Name = "locationLabel";
+            locationLabel.Size = new System.Drawing.Size(51, 13);
+            locationLabel.TabIndex = 5;
+            locationLabel.Text = "Location:";
             // 
-            // lblEmail
+            // descriptionLabel
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(82, 203);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(52, 20);
-            this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "Email:";
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(91, 95);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(63, 13);
+            descriptionLabel.TabIndex = 7;
+            descriptionLabel.Text = "Description:";
             // 
-            // lblLocation
+            // dateLabel
             // 
-            this.lblLocation.AutoSize = true;
-            this.lblLocation.Location = new System.Drawing.Point(60, 252);
-            this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(74, 20);
-            this.lblLocation.TabIndex = 3;
-            this.lblLocation.Text = "Location:";
+            dateLabel.AutoSize = true;
+            dateLabel.Location = new System.Drawing.Point(91, 122);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new System.Drawing.Size(33, 13);
+            dateLabel.TabIndex = 9;
+            dateLabel.Text = "Date:";
             // 
-            // lblDate
+            // ticketsDataSet
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(348, 108);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(48, 20);
-            this.lblDate.TabIndex = 4;
-            this.lblDate.Text = "Date:";
+            this.ticketsDataSet.DataSetName = "TicketsDataSet";
+            this.ticketsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lblPriority
+            // ticketsBindingSource
             // 
-            this.lblPriority.AutoSize = true;
-            this.lblPriority.Location = new System.Drawing.Point(348, 152);
-            this.lblPriority.Name = "lblPriority";
-            this.lblPriority.Size = new System.Drawing.Size(60, 20);
-            this.lblPriority.TabIndex = 5;
-            this.lblPriority.Text = "Priority:";
+            this.ticketsBindingSource.DataMember = "Tickets";
+            this.ticketsBindingSource.DataSource = this.ticketsDataSet;
             // 
-            // lblDescription
+            // ticketsTableAdapter
             // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(338, 206);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(93, 20);
-            this.lblDescription.TabIndex = 6;
-            this.lblDescription.Text = "Description:";
+            this.ticketsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.TicketsTableAdapter = this.ticketsTableAdapter;
+            this.tableAdapterManager.UpdateOrder = FinalProject_TicketSystem.TicketsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketsBindingSource, "Name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(160, 40);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.nameTextBox.TabIndex = 4;
+            // 
+            // locationTextBox
+            // 
+            this.locationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketsBindingSource, "Location", true));
+            this.locationTextBox.Location = new System.Drawing.Point(160, 66);
+            this.locationTextBox.Name = "locationTextBox";
+            this.locationTextBox.Size = new System.Drawing.Size(200, 20);
+            this.locationTextBox.TabIndex = 6;
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketsBindingSource, "Description", true));
+            this.descriptionTextBox.Location = new System.Drawing.Point(160, 92);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.descriptionTextBox.TabIndex = 8;
+            // 
+            // dateDateTimePicker
+            // 
+            this.dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.ticketsBindingSource, "Date", true));
+            this.dateDateTimePicker.Location = new System.Drawing.Point(160, 118);
+            this.dateDateTimePicker.Name = "dateDateTimePicker";
+            this.dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateDateTimePicker.TabIndex = 10;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(258, 338);
+            this.btnSubmit.Location = new System.Drawing.Point(196, 189);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(124, 43);
-            this.btnSubmit.TabIndex = 7;
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 11;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(152, 95);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 26);
-            this.txtName.TabIndex = 8;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(152, 149);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 26);
-            this.txtPhone.TabIndex = 9;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(152, 200);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 26);
-            this.txtEmail.TabIndex = 10;
-            // 
-            // txtLocation
-            // 
-            this.txtLocation.Location = new System.Drawing.Point(152, 252);
-            this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(100, 26);
-            this.txtLocation.TabIndex = 11;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Location = new System.Drawing.Point(442, 200);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(188, 121);
-            this.txtDescription.TabIndex = 12;
-            // 
-            // drpPriority
-            // 
-            this.drpPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.drpPriority.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.drpPriority.FormattingEnabled = true;
-            this.drpPriority.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.drpPriority.Location = new System.Drawing.Point(442, 152);
-            this.drpPriority.Name = "drpPriority";
-            this.drpPriority.Size = new System.Drawing.Size(100, 28);
-            this.drpPriority.TabIndex = 14;
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(442, 102);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(134, 26);
-            this.dtpDate.TabIndex = 15;
+            this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
             // 
             // Customer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(650, 398);
-            this.Controls.Add(this.dtpDate);
-            this.Controls.Add(this.drpPriority);
-            this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.txtLocation);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtName);
+            this.ClientSize = new System.Drawing.Size(473, 259);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lblDescription);
-            this.Controls.Add(this.lblPriority);
-            this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.lblLocation);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.lblName);
+            this.Controls.Add(nameLabel);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(locationLabel);
+            this.Controls.Add(this.locationTextBox);
+            this.Controls.Add(descriptionLabel);
+            this.Controls.Add(this.descriptionTextBox);
+            this.Controls.Add(dateLabel);
+            this.Controls.Add(this.dateDateTimePicker);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Customer";
             this.Text = "Customer";
             this.Load += new System.EventHandler(this.Customer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,21 +178,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblLocation;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblPriority;
-        private System.Windows.Forms.Label lblDescription;
+        private TicketsDataSet ticketsDataSet;
+        private System.Windows.Forms.BindingSource ticketsBindingSource;
+        private TicketsDataSetTableAdapters.TicketsTableAdapter ticketsTableAdapter;
+        private TicketsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox locationTextBox;
+        private System.Windows.Forms.TextBox descriptionTextBox;
+        private System.Windows.Forms.DateTimePicker dateDateTimePicker;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtLocation;
-        private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.ComboBox drpPriority;
-        private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }
 

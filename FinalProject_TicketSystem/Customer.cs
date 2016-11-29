@@ -13,6 +13,9 @@ namespace FinalProject_TicketSystem
     public partial class Customer : Form
     {
 
+        private TicketsDataSetTableAdapters.TicketsTableAdapter adapter;
+
+        
        
 
         public Customer()
@@ -22,55 +25,58 @@ namespace FinalProject_TicketSystem
 
         private void Customer_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            if(string.IsNullOrWhiteSpace(this.txtName.Text))
-            {
-                MessageBox.Show("Please fill in the name");
-            }
-
-            else if (string.IsNullOrWhiteSpace(this.txtPhone.Text))
-            {
-                MessageBox.Show("Please fill in the phone number");
-            }
-
-            else if (string.IsNullOrWhiteSpace(this.txtEmail.Text))
-            {
-                MessageBox.Show("Please fill in your email");
-            }
-
-            else if (string.IsNullOrWhiteSpace(this.txtLocation.Text))
-            {
-                MessageBox.Show("Please fill in your location");
-            }
-
-            else if (string.IsNullOrWhiteSpace(this.dtpDate.Text))
-            {
-                MessageBox.Show("Please pick a date");
-            }
-
-            else if (string.IsNullOrWhiteSpace(this.drpPriority.Text))
-            {
-                MessageBox.Show("Please choose a priority");
-            }
-
-            else if (string.IsNullOrWhiteSpace(this.txtDescription.Text))
-            {
-                MessageBox.Show("Please fill in the descrition");
-            }
-
-
-
+            adapter = new TicketsDataSetTableAdapters.TicketsTableAdapter();
 
 
         }
+
+        
+
+           
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ticketsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.ticketsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.ticketsDataSet);
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            adapter.Insert(nameTextBox.Text, locationTextBox.Text, descriptionTextBox.Text, dateDateTimePicker.Value);
+
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.nameTextBox.Text))
+            {
+                MessageBox.Show("Please fill in the name");
+            }
+
+            else if (string.IsNullOrWhiteSpace(this.locationTextBox.Text))
+            {
+                MessageBox.Show("Please fill in your location");
+            }
+
+            else if (string.IsNullOrWhiteSpace(this.descriptionTextBox.Text))
+            {
+                MessageBox.Show("Please fill in your location");
+            }
+
+
+            adapter.Insert(nameTextBox.Text, locationTextBox.Text, descriptionTextBox.Text, dateDateTimePicker.Value);
         }
     }
 }
